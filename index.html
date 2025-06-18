@@ -1,38 +1,49 @@
 
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>TaskiJo - مهامي</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskiJo | منصة تنفيذ المهام</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; direction: rtl; background: #f0f4f8; color: #333; padding: 20px; }
-        header { background: #007BFF; color: white; padding: 10px 20px; border-radius: 8px; }
-        section { margin-top: 20px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
-        .footer { font-size: 14px; margin-top: 30px; color: #555; }
+        body { font-family: 'Cairo', sans-serif; margin: 0; padding: 0; background: #f0f4f8; color: #222; }
+        header { background: #007BFF; color: white; padding: 1rem 2rem; text-align: center; }
+        main { padding: 2rem; }
+        .tasks { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        .task-card { background: white; border-radius: 10px; padding: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .task-card h3 { margin: 0 0 0.5rem; }
+        .task-card p { font-size: 14px; color: #555; }
+        .task-card button { margin-top: 1rem; background: #007BFF; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; }
+        footer { text-align: center; font-size: 13px; color: #555; margin-top: 2rem; padding: 1rem; }
     </style>
 </head>
 <body>
     <header>
-        <h1>TaskiJo - منصة المهام الذكية</h1>
+        <h1>TaskiJo</h1>
+        <p>منصة تنفيذ المهام وجني الأرباح</p>
     </header>
-    <section>
-        <h2>سحب الأرباح</h2>
-        <p>سيتم إرسال المبلغ إلى محفظتك خلال ساعات من تأكيد الطلب.</p>
-        <form>
-            <label>الاسم الكامل: <input type="text" required></label><br><br>
-            <label>نوع المحفظة:
-                <select>
-                    <option>زين كاش</option>
-                    <option>أورنج موني</option>
-                    <option>حساب بنكي</option>
-                </select>
-            </label><br><br>
-            <label>رقم المحفظة / IBAN: <input type="text" required></label><br><br>
-            <button type="submit">طلب سحب</button>
-        </form>
-    </section>
-    <div class="footer">
-        🛡️ تنويه هام: لا يطلب موقع TaskiJo أي معلومات حساسة أو تحويل مباشر عبر الإنترنت. يتم تنفيذ جميع التحويلات المالية يدويًا من محفظة المدير، خلال ساعات من طلب السحب.
-    </div>
+    <main>
+        <section class="tasks">
+            <div class="task-card">
+                <h3>مهمة 1</h3>
+                <p>شاهد إعلان 30 ثانية وارسل لقطة شاشة</p>
+                <button>تنفيذ المهمة</button>
+            </div>
+            <div class="task-card">
+                <h3>مهمة 2</h3>
+                <p>تابع صفحة على إنستغرام وأرسل إثبات</p>
+                <button>تنفيذ المهمة</button>
+            </div>
+            <div class="task-card">
+                <h3>مهمة 3</h3>
+                <p>شارك رابط منتج في مجموعة واتساب</p>
+                <button>تنفيذ المهمة</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        🛡️ تنويه: لا يطلب TaskiJo أي معلومات حساسة. جميع التحويلات تتم يدويًا خلال ساعات من الطلب.
+    </footer>
 </body>
 </html>
